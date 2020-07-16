@@ -1,0 +1,25 @@
+{
+  "name": "kookjs-typescript-starter",
+  "workspaces": [
+    "src/packages/*",
+    "../kook_server/packages/*",
+    "../kook_server/modules/*"
+  ],
+  "_moduleAliases": {
+    "@jeoga": "dist/packages/"
+  },
+  "private": true,
+  "scripts": {
+    "linkdep": "node symlink.js",
+    "start": "NODE_PATH=./node_modules ts-node-dev --respawn --transpile-only --ignore-watch node_modules ./src/index.ts",
+    "tsnode": "NODE_PATH=./node_modules ts-node ./src/index.ts",
+    "linkdep:prod": "NODE_ENV='production' node symlink.js",
+    "start:prod": "NODE_PATH=./node_modules node dist/index.js",
+    "abc": "NODE_PATH=./node_modules concurrently \"tsc -w\" \"nodemon dist/index.js\""
+  },
+  "devDependencies": {
+    "module-alias": "^2.2.2",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.9.6"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "@jeoga/commerce",
+  "version": "1.0.0",
+  "description": "An E-Commerce plugin to build online stores.",
+  "author": "Aman Khanakia",
+  "license": "MIT",
+  "homepage": "https://kook.khanakia.com",
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/khanakia"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kookjs/kook"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "inversify": "^5.0.1"
+  },
+  "devDependencies": {
+    "type-graphql": "^1.0.0-rc.3",
+    "typeorm": "^0.2.25"
+  }
+}
